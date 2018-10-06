@@ -11,4 +11,13 @@
 <% end %> -->
 
 
-<%= render 'form' %>
+
+<%= form_for @post do |f| %>
+  <%= f.label 'Post Title' %><br>
+  <%= f.text_field :title %><br>
+ 
+  <%= f.label 'Post Description' %><br>
+  <%= f.text_area :description %><br>
+ 
+  <%= f.submit "Submit Post" %>
+<% end %>
